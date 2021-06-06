@@ -30,7 +30,7 @@ app.get('/pagar',async (req, res) =>{
         },
         external_refence: id    
     }
-    
+
     console.log('chegou aqui 2')
     try{
         console.log('chegou aqui 3')
@@ -44,6 +44,11 @@ app.get('/pagar',async (req, res) =>{
 
 })
 
-app.listen(4000, (req,res) =>{
+app.post('/not', (req, res) => {
+    console.log(req.query)
+    res.send('Ok')
+})
+
+app.listen(80, (req,res) =>{
     console.log('ta funfando!')
 } )
